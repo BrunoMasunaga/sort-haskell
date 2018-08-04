@@ -1,3 +1,5 @@
+import Data.List
+
 -- Bubble Sort
 ordenado :: (Ord a) => [a] -> Bool
 ordenado (x1:x2:xs) = if x1 <= x2
@@ -40,7 +42,6 @@ selectionSort (x1:x2:xs) = minimo:(selectionSort $ remover minimo (x1:x2:xs))
                               where minimo = minimum (x1:x2:xs)
 selectionSort xs         = xs
                               
--- Counting Sort
 -- Merge Sort
 intercalar :: (Ord a) => [a] -> [a] -> [a]
 intercalar [] []         = []
@@ -70,6 +71,28 @@ quickSort (x1:x2:xs) = quickSort pivotEsq ++ [x1] ++ quickSort pivotDir
                           where (pivotEsq, pivotDir) = dividirPivot (x1:x2:xs)
 quickSort xs         = xs
 
+-- Counting Sort
 -- Heap Sort
--- Bucket Sort
+-- Bucket Sort (Utilizando 10 buckets)
+divisor :: [Int] -> Int
+divisor xs = (div ((maximum xs) + 1) 10) + 1
+
+encontrarBucket :: Int -> [Int] -> Int
+encontrarBucket x xs = div x (divisor xs)
+
+criarBucket :: [Int] -> Int -> [Int]
+criarBucket xs i = [x | x <- xs, (encontrarBucket x xs) == i]
+
+criarBuckets :: [Int] -> [[Int]]
+criarBuckets xs = [criarBucket xs i | i <- [0..9]]
+
+ordenarBuckets :: [[Int]] -> [[Int]]
+ordenarBuckets []       = []
+ordenarBuckets [xs]     = [xs]
+ordenarBuckets (xs:xss) = (insertionSort xs):(ordenarBuckets xss)
+
+bucketSort :: [Int] -> [Int]
+bucketSort (x1:x2:xs) = concat $ ordenarBuckets $ criarBuckets (x1:x2:xs)
+bucketSort xs         = xs
+
 -- Radix Sort
