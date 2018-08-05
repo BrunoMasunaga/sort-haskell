@@ -16,7 +16,7 @@ bubbleSort :: (Ord a) => [a] -> [a]
 bubbleSort (x1:x2:xs)  = if ordenado chamadaRec
                          then chamadaRec 
                          else bubbleSort chamadaRec
-                            where chamadaRec = chamadaBubble (x1:x2:xs)
+                            where chamadaRec = chamadaBubble $ x1:x2:xs
 bubbleSort xs          = xs
                          
 -- Insertion Sort
@@ -27,7 +27,7 @@ inserir x (y:ys) = if x <= y
                    else y:(inserir x ys)
 
 insertionSort :: (Ord a) => [a] -> [a]
-insertionSort (x1:x2:xs) = inserir x1 $ insertionSort (x2:xs)
+insertionSort (x1:x2:xs) = inserir x1 $ insertionSort $ x2:xs
 insertionSort xs         = xs
 
 -- Selection Sort
@@ -39,7 +39,7 @@ remover x (y:ys) = if x == y
 
 selectionSort :: (Ord a) => [a] -> [a]
 selectionSort (x1:x2:xs) = minimo:(selectionSort $ remover minimo (x1:x2:xs)) 
-                              where minimo = minimum (x1:x2:xs)
+                              where minimo = minimum $ x1:x2:xs
 selectionSort xs         = xs
                               
 -- Merge Sort
@@ -59,7 +59,7 @@ dividir xs  = (take metade xs, drop metade xs)
                  
 mergeSort :: Ord a => [a] -> [a]
 mergeSort (x1:x2:xs) = intercalar (mergeSort esq) (mergeSort dir)
-                          where (esq, dir) = dividir (x1:x2:xs)
+                          where (esq, dir) = dividir $ x1:x2:xs
 mergeSort xs         = xs
 
 -- Quick Sort
@@ -68,10 +68,32 @@ dividirPivot (x:xs)  = (filter (<= x) xs, filter (> x) xs)
 
 quickSort :: (Ord a) => [a] -> [a]
 quickSort (x1:x2:xs) = quickSort pivotEsq ++ [x1] ++ quickSort pivotDir
-                          where (pivotEsq, pivotDir) = dividirPivot (x1:x2:xs)
+                          where (pivotEsq, pivotDir) = dividirPivot $ x1:x2:xs
 quickSort xs         = xs
 
 -- Counting Sort
+tamanhoAuxiliar :: [Int] -> Int
+tamanhoAuxiliar xs = (maximum xs)-(minimum xs)
+
+contarOcorrencias :: Int -> [Int] -> Int
+contarOcorrencias x xs = length $ filter (== x) xs
+
+construirAuxiliar :: [Int] -> [Int]
+construirAuxiliar xs = [contarOcorrencias (x+min) xs | x <- [0..tAux]] 
+                          where min = minimum xs
+                                tAux = tamanhoAuxiliar xs
+                                
+add :: Int -> Int -> [Int] -> [Int]
+add _ 0 xs = xs
+add x i xs = add x (i-1) (xs ++ [x])  
+
+countingSort :: [Int] -> [Int]
+countingSort (x1:x2:xs) = concat [add (y+min) (auxiliar!!y) [] | y <- [0..tAux]]
+                             where auxiliar = construirAuxiliar $ x1:x2:xs
+                                   min      = minimum $ x1:x2:xs
+                                   tAux     = tamanhoAuxiliar $ x1:x2:xs
+countingSort xs         = xs
+
 -- Heap Sort
 -- Bucket Sort (Utilizando 10 buckets)
 divisor :: [Int] -> Int
