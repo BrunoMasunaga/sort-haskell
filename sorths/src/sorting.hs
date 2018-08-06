@@ -89,10 +89,53 @@ countingSort :: [Int] -> [Int]
 countingSort []  = []
 countingSort [x] = [x]
 countingSort xs  = concat [add (y+min) (auxiliar!!y) [] | y <- [0..tAux]]
-                       where auxiliar = construirAuxiliar xs
-                             min      = minimum xs
-                             tAux     = tamanhoAuxiliar xs
------------------------------------ Heap Sort ----------------------------------
+                      where auxiliar = construirAuxiliar xs
+                            min      = minimum xs
+                            tAux     = tamanhoAuxiliar xs
+--------------------------------- Max-Heap Sort --------------------------------
+trocar :: (Ord a) => Int -> Int -> [a] -> [a]
+trocar i j xs = if i == j
+                then xs
+                else esquerda ++ [xs!!y] ++ meio ++ [xs!!x] ++ direita
+                   where esquerda = take x xs
+                         meio     = take (y - x - 1) $ drop (x + 1) xs
+                         direita  = drop (y + 1) xs
+                         (x,y)    = if i <= j
+                                    then (i,j)
+                                    else (j,i)
+
+encontrarMaximo :: (Ord a) => Int -> Int -> [a] -> Int
+encontrarMaximo ipai tam xs = 
+        let imaior = if (iesq < tam) && ((xs!!iesq) > (xs!!ipai)) 
+                     then iesq 
+                     else ipai
+        in if (idir < tam) && ((xs!!idir) > (xs!!imaior)) 
+           then idir 
+           else imaior
+              where iesq = 2 * ipai + 1
+                    idir = 2 * ipai + 2
+
+maxHeapify :: (Ord a) => Int -> Int -> [a] -> [a]
+maxHeapify ipai tam xs = if maior /= ipai 
+                         then maxHeapify maior tam $ trocar maior ipai xs
+                         else xs
+                            where maior = encontrarMaximo ipai tam xs
+
+construirHeap :: (Ord a) => Int -> [a] -> [a]
+construirHeap 0 xs = maxHeapify 0 (length xs) xs
+construirHeap tam xs = construirHeap (tam - 1) $ maxHeapify tam (length xs) xs
+
+chamadaHeap :: (Ord a) => Int -> [a] -> [a]
+chamadaHeap tam xs = if tam /= 1 
+                     then chamadaHeap (tam - 1) $ maxHeapify 0 tam trocado
+                     else maxHeapify 0 tam trocado
+                         where trocado = trocar 0 tam xs
+                         
+heapSort :: (Ord a) => [a] -> [a]
+heapSort []  = []
+heapSort [x] = [x]
+heapSort xs  = chamadaHeap (length xs - 1) heap
+                  where heap = construirHeap (length xs `div` 2) xs
 ---------------------- Bucket Sort (Utilizando 10 buckets) ---------------------
 divisor :: [Int] -> Int
 divisor xs = (div ((maximum xs) + 1) 10) + 1
