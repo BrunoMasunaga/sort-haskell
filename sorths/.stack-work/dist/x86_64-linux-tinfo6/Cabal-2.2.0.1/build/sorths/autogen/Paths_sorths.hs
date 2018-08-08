@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/bin"
-libdir     = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/lib/x86_64-linux-ghc-8.4.3/sorths-0.1.0.0-HB3NFssffJF2IrUNi6qRTf-sorths"
+libdir     = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/lib/x86_64-linux-ghc-8.4.3/sorths-0.1.0.0-BFbltPBr4C8AJpz83bo5pz-sorths"
 dynlibdir  = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/lib/x86_64-linux-ghc-8.4.3"
 datadir    = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/share/x86_64-linux-ghc-8.4.3/sorths-0.1.0.0"
 libexecdir = "/home/brunomasunaga/Documents/UFABC/Paradigmas/sorting/sorths/.stack-work/install/x86_64-linux-tinfo6/lts-12.4/8.4.3/libexec/x86_64-linux-ghc-8.4.3/sorths-0.1.0.0"

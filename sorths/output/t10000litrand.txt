@@ -1,0 +1,11 @@
+"Bubble Sort:     3638.70155407s"
+"Insertion Sort:  0.000437617s"
+"Selection Sort:  0.000011069s"
+"Merge Sort:      0.003162805s"
+"Quick Sort:      0.000306467s"
+"Counting Sort:   0.000194841s"
+"Heap Sort:       0.000861319s"
+"Bucket Sort:     0.350120378s"
+"Radix Sort:      2.721956852s"
+"Default Haskell: 0.000626043s"
+

@@ -33,6 +33,17 @@
   (major1) == 1 && (major2) == 8 && (minor) <= 0)
 #endif /* MIN_VERSION_time */
 
+/* package QuickCheck-2.11.3 */
+#ifndef VERSION_QuickCheck
+#define VERSION_QuickCheck "2.11.3"
+#endif /* VERSION_QuickCheck */
+#ifndef MIN_VERSION_QuickCheck
+#define MIN_VERSION_QuickCheck(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  11 || \
+  (major1) == 2 && (major2) == 11 && (minor) <= 3)
+#endif /* MIN_VERSION_QuickCheck */
+
 /* tool alex-3.2.3 */
 #ifndef TOOL_VERSION_alex
 #define TOOL_VERSION_alex "3.2.3"
@@ -166,7 +177,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "sorths-0.1.0.0-HB3NFssffJF2IrUNi6qRTf-sorths"
+#define CURRENT_COMPONENT_ID "sorths-0.1.0.0-BFbltPBr4C8AJpz83bo5pz-sorths"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

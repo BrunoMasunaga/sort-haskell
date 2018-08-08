@@ -1,0 +1,690 @@
+
+==================== FINAL INTERFACE ====================
+2018-08-08 16:02:56.604109704 UTC
+
+interface main:Validate 8043
+  interface hash: e48d35e384201725237b328fb976bb3b
+  ABI hash: 87a872a17665679ebb5bf4bfff065a17
+  export-list hash: 5dce78c41254b9ba6c6cb47a34235f0b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2ca58541161456f760201087e169b356
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Validate.p1b
+  Validate.p1bk
+  Validate.p1c
+  Validate.p1h
+  Validate.p1i
+  Validate.p1m
+  Validate.p1q
+  Validate.p1r
+  Validate.p1s
+  Validate.p2b
+  Validate.p2bk
+  Validate.p2c
+  Validate.p2h
+  Validate.p2i
+  Validate.p2m
+  Validate.p2q
+  Validate.p2r
+  Validate.p2s
+  Validate.p3b
+  Validate.p3bk
+  Validate.p3c
+  Validate.p3h
+  Validate.p3i
+  Validate.p3m
+  Validate.p3q
+  Validate.p3r
+  Validate.p3s
+module dependencies: Sorting
+package dependencies: QuickCheck-2.11.3 array-0.5.2.0
+                      base-4.11.1.0* containers-0.5.11.0 deepseq-1.4.3.0
+                      ghc-boot-th-8.4.3 ghc-prim-0.5.2.0 integer-gmp-1.0.2.0
+                      pretty-1.1.3.6 primitive-0.6.3.0 random-1.1
+                      template-haskell-2.13.0.0 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.11.1.0:GHC.Float
+         base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Complex base-4.11.1.0:Data.Functor.Compose
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity
+                         base-4.11.1.0:Data.Functor.Product base-4.11.1.0:Data.Functor.Sum
+                         base-4.11.1.0:Data.Monoid base-4.11.1.0:Data.Semigroup
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:Data.Version
+                         base-4.11.1.0:Data.Void base-4.11.1.0:GHC.Exts
+                         base-4.11.1.0:GHC.Generics base-4.11.1.0:GHC.IO.Exception
+                         containers-0.5.11.0:Data.IntMap.Internal
+                         containers-0.5.11.0:Data.IntSet.Internal
+                         containers-0.5.11.0:Data.Map.Internal
+                         containers-0.5.11.0:Data.Sequence.Internal
+                         containers-0.5.11.0:Data.Set.Internal
+                         ghc-boot-th-8.4.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.4.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.ByteArray
+                         template-haskell-2.13.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.11.3:Test.QuickCheck e00d138ee3234e83a31cc3113c8c8ffb
+import  -/  QuickCheck-2.11.3:Test.QuickCheck.Property 2a2442debcbf309292a12478b176466b
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  Sorting 54660c63883281552a354cd26362979a
+  exports: 0791d7081be824a6e348dbf44adb51ba
+  bubbleSort b704718ac0a2d36b4448b7adb27624c8
+  bucketSort 2f3e394917ec823a9d4e139318be7048
+  countingSort a01b0ce6b3401826d5d3b231713b4116
+  heapSort 7a9bacd3afff574f20e93853b69924b5
+  insertionSort ab4a3c84c5176aeb1c0a6e71a9254c8f
+  mergeSort d23ac9a57c8e548378411b6fa348d458
+  quickSort dd877ce12295c0efef40930630c08d34
+  radixSort 6d198e5b934873014493838f4bf0094a
+  selectionSort 1d8af1237d114cb463612b7c6f0aee6d
+c760ec6f793f83d0d8a4f03a598055bb
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Validate.$trModule3
+                   Validate.$trModule1) -}
+dc6c5e3252eecbaaad426837ee876c5d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Validate.$trModule2) -}
+94f51a2db2686b8c49fb0b3b8fd2bdca
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Validate"#) -}
+fbb851a1a7f7a67bb62deab23394e2c0
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Validate.$trModule4) -}
+af10fc5c4a20d4d2ac9f4cd2b03dfcef
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+804596eee04bd891a938b0517e467539
+  p1b :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U(C(C1(U)),A),A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.bubbleSort @ a $dOrd (Sorting.bubbleSort @ a $dOrd eta))
+                   (Sorting.bubbleSort @ a $dOrd eta)) -}
+40c4bf73a19ab8171b6e63d93553b087
+  p1bk :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case Sorting.bucketSort xs of wild {
+                   []
+                   -> GHC.Classes.$fEq[]_$s$c==
+                        (GHC.Types.[] @ GHC.Types.Int)
+                        (GHC.Types.[] @ GHC.Types.Int)
+                   : x1 ds1
+                   -> case ds1 of wild1 {
+                        [] -> GHC.Classes.$fEq[]_$s$c== wild wild
+                        : x2 xs1
+                        -> GHC.Classes.$fEq[]_$s$c==
+                             (Sorting.bucketSort_go
+                                (Sorting.ordenarBuckets (Sorting.criarBuckets wild)))
+                             wild } }) -}
+2ae5bb6612c11e3d0f67b13525f0564f
+  p1c :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 GHC.Classes.$fEq[]_$s$c==
+                   (Sorting.countingSort (Sorting.countingSort xs))
+                   (Sorting.countingSort xs)) -}
+a97599a8f4491ddb0852fec93b9fb989
+  p1h :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,U(1*U(C(C1(U)),A),A,A,A,C(C1(U)),A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.heapSort @ a $dOrd (Sorting.heapSort @ a $dOrd eta))
+                   (Sorting.heapSort @ a $dOrd eta)) -}
+0838c156b39f2365242d8d40553aec4f
+  p1i :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U(C(C1(U)),A),A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.insertionSort
+                      @ a
+                      $dOrd
+                      (Sorting.insertionSort @ a $dOrd eta))
+                   (Sorting.insertionSort @ a $dOrd eta)) -}
+502b8375e827906a3d63af437a9da7ba
+  p1m :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U(C(C1(U)),A),A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.mergeSort @ a $dOrd (Sorting.mergeSort @ a $dOrd eta))
+                   (Sorting.mergeSort @ a $dOrd eta)) -}
+4c5ace03555745dc9bc623fab228f6de
+  p1q :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*U(C(C1(U)),A),A,A,C(C1(U)),C(C1(U)),A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.quickSort @ a $dOrd (Sorting.quickSort @ a $dOrd eta))
+                   (Sorting.quickSort @ a $dOrd eta)) -}
+2100e9167422e1900f5d5f8835b1a670
+  p1r :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 GHC.Classes.$fEq[]_$s$c==
+                   (Sorting.radixSort (Sorting.radixSort xs))
+                   (Sorting.radixSort xs)) -}
+323b19551ee65c02bf12ae8b78ae7e15
+  p1s :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),A,A,A,A,A,A,C(C1(U)))><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 GHC.Classes.$fEq[]_$c==
+                   @ a
+                   (GHC.Classes.$p1Ord @ a $dOrd)
+                   (Sorting.selectionSort
+                      @ a
+                      $dOrd
+                      (Sorting.selectionSort @ a $dOrd eta))
+                   (Sorting.selectionSort @ a $dOrd eta)) -}
+7f02f4e5205c4c6c0802cbcbe2783cf8
+  p2b :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.bubbleSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+ec8c70bfbe99cacafddf4ec9115809d5
+  p2bk :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Int
+                        (Sorting.bucketSort xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Int xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+cd3406db66e8e0161d35d461bd2f2f93
+  p2c :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Int
+                        (Sorting.countingSort xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Int xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+cd0d5d8d2729322e843a926dde9b7f89
+  p2h :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,U(A,A,A,A,C(C1(U)),A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.heapSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+e942c5479b54357c2686b67cb66666d0
+  p2i :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.insertionSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+34b99b3ac56b9b845044ee549c46b6d4
+  p2m :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.mergeSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+82eb67d6224403436f7ce77955dd5b11
+  p2q :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,C(C1(U)),C(C1(U)),A,A,A)><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.quickSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+8e1f483e03cb2c6f3e7c2eba87dd4e53
+  p2r :: [GHC.Types.Int] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Int
+                        (Sorting.radixSort xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Int xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+e55b05600d8ffcd00d0ede355e10844a
+  p2s :: GHC.Classes.Ord a => [a] -> GHC.Types.Bool
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),A,A,A,A,A,A,C(C1(U)))><S,U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (xs :: [a]) ->
+                 case GHC.List.$wlenAcc
+                        @ a
+                        (Sorting.selectionSort @ a $dOrd xs)
+                        0# of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ a xs 0# of ww1 { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool (GHC.Prim.==# ww2 ww1) } }) -}
+1f64a51feaf144d232afca5ca372a650
+  p3b ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C1(C1(U)),A),A,A,C(C1(U)),A,A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case Sorting.bubbleSort @ a $dOrd wild of wild1 {
+                                          [] -> GHC.List.badHead @ a : x ds4 -> x })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+7479efcd9d7e61b1fdf60d3c152a2a57
+  p3bk :: [GHC.Types.Int] -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case xs of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case ds2 of wild1 {
+                                  []
+                                  -> case ds1 of wild2 { GHC.Types.I# x ->
+                                     case GHC.List.$wgo1
+                                            (GHC.Types.[] @ GHC.Types.Int)
+                                            x of ww2 { DEFAULT ->
+                                     case GHC.Prim.==# x ww2 of lwild {
+                                       DEFAULT -> Test.QuickCheck.Property.counterexample1
+                                       1# -> Test.QuickCheck.Property.succeeded } } }
+                                  : x2 xs1
+                                  -> case Sorting.bucketSort_go
+                                            (Sorting.ordenarBuckets
+                                               (Sorting.criarBuckets wild)) of wild2 {
+                                       []
+                                       -> case GHC.List.badHead
+                                          ret_ty Test.QuickCheck.Property.Result
+                                          of {}
+                                       : x ds4
+                                       -> case x of wild3 { GHC.Types.I# x4 ->
+                                          case ds1 of ww { GHC.Types.I# ww1 ->
+                                          case GHC.List.$wgo1 wild1 ww1 of ww2 { DEFAULT ->
+                                          case GHC.Prim.==# x4 ww2 of lwild {
+                                            DEFAULT -> Test.QuickCheck.Property.counterexample1
+                                            1# -> Test.QuickCheck.Property.succeeded } } } } } })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+0190baa15cb1d684daecdb35327f9569
+  p3c :: [GHC.Types.Int] -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case xs of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case Sorting.countingSort wild of wild1 {
+                                  []
+                                  -> case GHC.List.badHead
+                                     ret_ty Test.QuickCheck.Property.Result
+                                     of {}
+                                  : x ds4
+                                  -> case x of wild2 { GHC.Types.I# x2 ->
+                                     case ds1 of ww { GHC.Types.I# ww1 ->
+                                     case GHC.List.$wgo1 ds2 ww1 of ww2 { DEFAULT ->
+                                     case GHC.Prim.==# x2 ww2 of lwild {
+                                       DEFAULT -> Test.QuickCheck.Property.counterexample1
+                                       1# -> Test.QuickCheck.Property.succeeded } } } } })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+efba6ee9a19dc539c01ecc4c9090be6c
+  p3h ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C1(C1(U)),A),A,A,A,C(C1(U)),A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case ds2 of wild1 {
+                                          [] -> ds1
+                                          : ipv ipv1
+                                          -> case GHC.List.$wlenAcc @ a wild 0# of ww2 { DEFAULT ->
+                                             case Sorting.$wchamadaHeap
+                                                    @ a
+                                                    $dOrd
+                                                    (GHC.Prim.-# ww2 1#)
+                                                    (Sorting.$wconstruirHeap
+                                                       @ a
+                                                       $dOrd
+                                                       (GHC.Prim.uncheckedIShiftRA# ww2 1#)
+                                                       wild) of wild2 {
+                                               [] -> GHC.List.badHead @ a : x ds4 -> x } } })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+6d3c16997e467c3d5dc317ffe8b03835
+  p3i ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C1(C1(U)),A),A,A,C(C1(U)),A,A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case Sorting.insertionSort @ a $dOrd wild of wild1 {
+                                          [] -> GHC.List.badHead @ a : x ds4 -> x })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+e71acb5e43ba709f3af99f9e12def02a
+  p3m ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C1(C1(U)),A),A,A,C(C1(U)),A,A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case Sorting.mergeSort @ a $dOrd wild of wild1 {
+                                          [] -> GHC.List.badHead @ a : x ds4 -> x })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+1facb8415ad360ca73c2790f3c4aeb5e
+  p3q ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C1(C1(U)),A),A,A,C(C1(U)),C(C1(U)),A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case Sorting.quickSort @ a $dOrd wild of wild1 {
+                                          [] -> GHC.List.badHead @ a : x ds4 -> x })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+7e325294804a75692f7b51ea79d99662
+  p3r :: [GHC.Types.Int] -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (xs :: [GHC.Types.Int]) ->
+                 case xs of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case ds2 of wild1 {
+                                  []
+                                  -> case ds1 of wild2 { GHC.Types.I# x ->
+                                     case GHC.List.$wgo1
+                                            (GHC.Types.[] @ GHC.Types.Int)
+                                            x of ww2 { DEFAULT ->
+                                     case GHC.Prim.==# x ww2 of lwild {
+                                       DEFAULT -> Test.QuickCheck.Property.counterexample1
+                                       1# -> Test.QuickCheck.Property.succeeded } } }
+                                  : ipv ipv1
+                                  -> case ds1 of ww { GHC.Types.I# ww1 ->
+                                     case GHC.List.$wgo wild1 ww1 of ww2 { DEFAULT ->
+                                     case Sorting.$wnumDigitos ww2 0# of ww4 { DEFAULT ->
+                                     case Sorting.$wradix wild 1# ww4 of wild2 {
+                                       []
+                                       -> case GHC.List.badHead
+                                          ret_ty Test.QuickCheck.Property.Result
+                                          of {}
+                                       : x ds4
+                                       -> case x of wild3 { GHC.Types.I# x2 ->
+                                          case GHC.List.$wgo1 wild1 ww1 of ww7 { DEFAULT ->
+                                          case GHC.Prim.==# x2 ww7 of lwild {
+                                            DEFAULT -> Test.QuickCheck.Property.counterexample1
+                                            1#
+                                            -> Test.QuickCheck.Property.succeeded } } } } } } } })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+98d093ae0cd38c4daf3b28a6badcaaa0
+  p3s ::
+    GHC.Classes.Ord a => [a] -> Test.QuickCheck.Property.Property
+  {- Arity: 2,
+     Strictness: <L,U(U(C(C1(U)),A),A,A,A,A,A,A,C(C1(U)))><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case eta of wild {
+                   []
+                   -> Test.QuickCheck.Property.$fTestableDiscard2
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   : ds1 ds2
+                   -> let {
+                        x1 :: Test.QuickCheck.Property.Rose Test.QuickCheck.Property.Result
+                        = Test.QuickCheck.Property.onRose
+                            @ Test.QuickCheck.Property.Result
+                            Test.QuickCheck.Property.$fTestable()1
+                            (Test.QuickCheck.Property.MkRose
+                               @ Test.QuickCheck.Property.Result
+                               (case GHC.Classes.==
+                                       @ a
+                                       (GHC.Classes.$p1Ord @ a $dOrd)
+                                       (case Sorting.selectionSort @ a $dOrd wild of wild1 {
+                                          [] -> GHC.List.badHead @ a : x ds4 -> x })
+                                       (GHC.List.minimum @ a $dOrd wild) of wild1 {
+                                  GHC.Types.False -> Test.QuickCheck.Property.counterexample1
+                                  GHC.Types.True -> Test.QuickCheck.Property.succeeded })
+                               (GHC.Types.[]
+                                  @ (Test.QuickCheck.Property.Rose
+                                       Test.QuickCheck.Property.Result)))
+                      } in
+                      (\ (ds :: Test.QuickCheck.Random.QCGen) (ds4 :: GHC.Types.Int) ->
+                       x1)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
