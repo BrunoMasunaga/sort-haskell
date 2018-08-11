@@ -60,7 +60,7 @@ mergeSort (x1:x2:xs) = intercalar (mergeSort esq) (mergeSort dir)
 mergeSort xs         = xs
 ---------------------------------- Quick Sort ----------------------------------
 dividirPivot :: (Ord a) => [a] -> ([a],[a])
-dividirPivot (x:xs)  = (filter (<= x) xs, filter (> x) xs)
+dividirPivot (x:xs)  = (filter (< x) xs, filter (>= x) xs)
 
 quickSort :: (Ord a) => [a] -> [a]
 quickSort (x1:x2:xs) = quickSort pivotEsq ++ [x1] ++ quickSort pivotDir
@@ -172,7 +172,7 @@ obterDigitos (x:xs) digito i = (dig, i):(obterDigitos xs digito (i+1))
                                    where dig = obterDigito x digito
                                    
 ordenarDigitos :: [(Int,Int)] -> [Int]
-ordenarDigitos ts = [snd t | t <- (insertionSort ts)]
+ordenarDigitos ts = [snd t | t <- (selectionSort ts)]
 
 recuperarNumeros :: [Int] -> [Int] -> [Int] 
 recuperarNumeros xs is = [xs!!i | i <- is]

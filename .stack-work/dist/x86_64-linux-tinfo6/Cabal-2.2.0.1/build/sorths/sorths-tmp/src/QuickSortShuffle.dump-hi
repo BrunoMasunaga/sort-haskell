@@ -1,0 +1,195 @@
+
+==================== FINAL INTERFACE ====================
+2018-08-10 23:53:52.34439158 UTC
+
+interface main:QuickSortShuffle 8043
+  interface hash: 69af91064867ff3c2b84115f831b7590
+  ABI hash: 4a37563c8ae0c857d14c4d6482263b41
+  export-list hash: 528b0990f23d9164c2eaee49e1f8fab4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2ca58541161456f760201087e169b356
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  QuickSortShuffle.divide
+  QuickSortShuffle.juntar
+  QuickSortShuffle.quickSortShuffle
+  QuickSortShuffle.revertePrimeiro
+  QuickSortShuffle.shuffle
+module dependencies: Sorting
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+import  -/  Sorting 044ca801717eeafd4d3c711363d05312
+  exports: 0791d7081be824a6e348dbf44adb51ba
+  quickSort 9591c2681daa0a648c596ea3db969f88
+1d261d0362c35d1bd80e4dec08c256be
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   QuickSortShuffle.$trModule3
+                   QuickSortShuffle.$trModule1) -}
+5c391ee72d54f1e5e27567639e4d549e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS QuickSortShuffle.$trModule2) -}
+9337f9f556cbfab00d478bfd737fd867
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("QuickSortShuffle"#) -}
+569af37e8b0e805b91798c75c35e510a
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS QuickSortShuffle.$trModule4) -}
+ca96fb80469961e836e7d85a852cdba8
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+417bc4c57f91c2e06e75209aeadb77a6
+  $wdivide :: [a] -> (# [a], [a] #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ @ a (w :: [a]) ->
+                 (# case GHC.List.$wlenAcc @ a w 0# of ww2 { DEFAULT ->
+                    let {
+                      y :: GHC.Prim.Int# = GHC.Prim.-# ww2 1#
+                    } in
+                    case GHC.Prim.<# y 3# of lwild {
+                      DEFAULT
+                      -> GHC.Types.:
+                           @ a
+                           (GHC.List.$w!! @ a w 1#)
+                           (let {
+                              y' :: GHC.Prim.Int# = GHC.Prim.-# y 2#
+                            } in
+                            letrec {
+                              go_up :: GHC.Prim.Int# -> [a] {- Arity: 1, Strictness: <S,U> -}
+                              = \ (x :: GHC.Prim.Int#) ->
+                                case GHC.Prim.># x y' of lwild1 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ a
+                                       (GHC.List.$w!! @ a w x)
+                                       (go_up (GHC.Prim.+# x 2#))
+                                  1# -> GHC.Types.: @ a (GHC.List.$w!! @ a w x) (GHC.Types.[] @ a) }
+                            } in
+                            go_up 3#)
+                      1#
+                      -> case GHC.Prim.<# y 1# of lwild1 {
+                           DEFAULT
+                           -> GHC.Types.: @ a (GHC.List.$w!! @ a w 1#) (GHC.Types.[] @ a)
+                           1# -> GHC.Types.[] @ a } } },
+                    case GHC.List.$wlenAcc @ a w 0# of ww2 { DEFAULT ->
+                    let {
+                      y :: GHC.Prim.Int# = GHC.Prim.-# ww2 1#
+                    } in
+                    case GHC.Prim.<# y 2# of lwild {
+                      DEFAULT
+                      -> GHC.Types.:
+                           @ a
+                           (GHC.List.$w!! @ a w 0#)
+                           (let {
+                              y' :: GHC.Prim.Int# = GHC.Prim.-# y 2#
+                            } in
+                            letrec {
+                              go_up :: GHC.Prim.Int# -> [a] {- Arity: 1, Strictness: <S,U> -}
+                              = \ (x :: GHC.Prim.Int#) ->
+                                case GHC.Prim.># x y' of lwild1 {
+                                  DEFAULT
+                                  -> GHC.Types.:
+                                       @ a
+                                       (GHC.List.$w!! @ a w x)
+                                       (go_up (GHC.Prim.+# x 2#))
+                                  1# -> GHC.Types.: @ a (GHC.List.$w!! @ a w x) (GHC.Types.[] @ a) }
+                            } in
+                            go_up 2#)
+                      1#
+                      -> case GHC.Prim.<# y 0# of lwild1 {
+                           DEFAULT
+                           -> GHC.Types.: @ a (GHC.List.$w!! @ a w 0#) (GHC.Types.[] @ a)
+                           1# -> GHC.Types.[] @ a } } } #)) -}
+8b73051c330cda6fe540b9f093295527
+  $wjuntar :: [a] -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: [0] -}
+7506e7a054edf7fb8e93090d8f3f2568
+  $wshuffle :: [a] -> [a]
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ @ a (w :: [a]) ->
+                 case w of wild {
+                   [] -> GHC.Types.[] @ a
+                   : x ds
+                   -> case ds of wild1 {
+                        [] -> GHC.Types.: @ a x (GHC.Types.[] @ a)
+                        : ipv ipv1
+                        -> case QuickSortShuffle.$wdivide @ a wild of ww { (#,#) ww1 ww2 ->
+                           QuickSortShuffle.$wjuntar
+                             @ a
+                             (GHC.List.reverse1 @ a ww1 (GHC.Types.[] @ a))
+                             ww2 } } }) -}
+fc0278c37848fefab52381b92abe0bf2
+  divide :: GHC.Classes.Ord a => [a] -> ([a], [a])
+  {- Arity: 2, Strictness: <L,A><L,U>m, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Classes.Ord a) (w1 :: [a]) ->
+                 case QuickSortShuffle.$wdivide @ a w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+545948722d34eb9c0a7c2a359c2af1e6
+  juntar :: GHC.Classes.Ord a => ([a], [a]) -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S(SS),1*U(1*U,1*U)>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: GHC.Classes.Ord a) (w1 :: ([a], [a])) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 QuickSortShuffle.$wjuntar @ a ww1 ww2 }) -}
+549b8ea72b42c14297a88d4df929a22d
+  quickSortShuffle :: GHC.Classes.Ord a => [a] -> [a]
+  {- Arity: 2,
+     Strictness: <L,U(A,A,C(C1(U)),A,A,C(C1(U)),A,A)><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (ds :: [a]) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ a
+                   : x1 ds1
+                   -> case ds1 of wild1 {
+                        [] -> wild
+                        : x2 xs
+                        -> case QuickSortShuffle.$wdivide @ a wild of ww { (#,#) ww1 ww2 ->
+                           Sorting.quickSort
+                             @ a
+                             $dOrd
+                             (QuickSortShuffle.$wjuntar
+                                @ a
+                                (GHC.List.reverse1 @ a ww1 (GHC.Types.[] @ a))
+                                ww2) } } }) -}
+68c9a6852bf5f0d7ce896850a61dbebf
+  revertePrimeiro :: GHC.Classes.Ord a => ([a], [a]) -> ([a], [a])
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U(1*U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a ($dOrd :: GHC.Classes.Ord a) (ds :: ([a], [a])) ->
+                 case ds of wild { (,) xs ys -> (GHC.List.reverse @ a xs, ys) }) -}
+99201eacf8e59bdb5ae3a4f4dbed8b4b
+  shuffle :: GHC.Classes.Ord a => [a] -> [a]
+  {- Arity: 2, Strictness: <L,A><S,1*U>, Inline: [0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a (w :: GHC.Classes.Ord a) (w1 :: [a]) ->
+                 QuickSortShuffle.$wshuffle @ a w1) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

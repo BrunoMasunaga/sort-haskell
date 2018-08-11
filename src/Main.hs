@@ -6,7 +6,7 @@ import Control.Exception
 import Data.Time (getCurrentTime)
 import Data.Time (diffUTCTime)
 
-array = [2,1,5,2,4]
+array = [2,4,13,35,6,54,213,16,7,8,0,0,1]
 
 main = do
     -- Bubble Sort --

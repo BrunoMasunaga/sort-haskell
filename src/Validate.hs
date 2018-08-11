@@ -1,5 +1,6 @@
 module Validate where
 import Sorting
+import QuickSortShuffle
 import Test.QuickCheck
 
 p1b :: (Ord a) => [a] -> Bool

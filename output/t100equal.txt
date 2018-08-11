@@ -2,7 +2,7 @@
 "Insertion Sort:  0.000002227s"
 "Selection Sort:  0.000000338s"
 "Merge Sort:      0.000015146s"
-"Quick Sort:      0.00017461s"
+"Quick Sort:      0.000001665s"
 "Counting Sort:   0.000008524s"
 "Heap Sort:       0.000002616s"
 "Bucket Sort:     0.0004157s"

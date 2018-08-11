@@ -1,6 +1,6 @@
 "Bubble Sort:     28762.231044891s"
 "Insertion Sort:  0.00143668s"
-"Selection Sort:  0.000000392s"
+"Selection Sort:  0.000000792s"
 "Merge Sort:      0.007107161s"
 "Quick Sort:      0.000549755s"
 "Counting Sort:   0.000551392s"
