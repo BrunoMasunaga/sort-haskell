@@ -202,7 +202,7 @@ E logo, é um algoritmo capaz de ordenar qualquer lista de elementos do tipo Ord
 
 
 \subsection{Bucket Sort}
-O Bucket Sort é um algoritmo que não realiza trocas ou comparações entre os elementos de um vetor. Ele divide os elementos em "baldes"  (buckets), que representam um intervalo determinado de valores, ordena os elementos de cada balde e constrói o vetor ordenado apenas recuperando os valores. De acordo com sua implementação imperativa, sua complexidade no pior caso é O($n^2$), mas seu caso médio é dado por O($n \log n$), que é mais recorrente.
+O Bucket Sort é um algoritmo que não realiza trocas ou comparações entre os elementos de um vetor. Ele divide os elementos em "baldes" (buckets), que representam um intervalo determinado de valores, ordena os elementos de cada balde e constrói o vetor ordenado apenas recuperando os valores. De acordo com sua implementação imperativa, sua complexidade no pior caso é O($n^2$), mas seu caso médio é dado por O($n \log n$), que é mais recorrente.
 
 Existem muitas variações deste algoritmo. Nesta implementação para o Haskell, optou-se por utilizar 10 buckets e o Insertion Sort como subrotina para ordenar os buckets. Esse modelo é uma adaptação da variação Generic Bucket Sort, que utiliza n buckets, onde n é um número calculado que depende do valor máximo do vetor. Essa implementação foi realizada pelo autor. As funções envolvidas são:
 
@@ -370,7 +370,7 @@ O resultado será:
 \end{figure}
 
 \subsection{Resultados da análise dos 20 vetores gerados}
-Foram elaborados gráficos para comparar o tempo de execução de cada algoritmo para cada família de vetores de mesmo tamanho. No entanto, os dados referentes ao Bubble Sort não foram representados por destoarem muito, portanto, serão apresentados separadamente. Para os 4 tamanhos de vetores, foram elaborados 2 gráficos: o primeiro demonstrando uma visão geral do desempenho de todos os algoritmos e o segundo com enfoque nos algoritmos que levaram mesmo tempo. Todos os testes foram realizados num Intel Core i7-4500U de 1.80GHz com 8GB RAM em situações de uso exclusivo do computador e podem ser verificados no diretório \textbf{output/}.
+Foram elaborados gráficos para comparar o tempo de execução de cada algoritmo para cada família de vetores de mesmo tamanho. No entanto, os dados referentes ao Bubble Sort não foram representados por destoarem muito, portanto, serão apresentados separadamente. Para os 4 tamanhos de vetores, foram elaborados 2 gráficos: o primeiro demonstrando uma visão geral do desempenho de todos os algoritmos e o segundo com enfoque nos algoritmos que levaram menos tempo. Todos os testes foram realizados num Intel Core i7-4500U de 1.80GHz com 8GB RAM em situações de uso exclusivo do computador e podem ser verificados no diretório \textbf{output/}.
 
 Os resultados obtidos para os vetores de tamanho 100 podem ser vistos nas imagens abaixo:
 \begin{figure}[h]
@@ -472,7 +472,7 @@ Resulta em:
 Através de testes de performance realizados para esta variação com os vetores de tamanho 10000, constatou-se que o tempo médio de execução é de 250 milissegundos para qualquer um dos vetores. É um tempo maior do que o que algoritmo original leva, com exceção do Reverse, que obteve grande redução no tempo. 
 
 \section{Conclusão}
-A implementação de algoritmos de ordenação em Haskell pode ser uma tarefa difícil ou fácil, dependendo de muitos fatores. Algoritmos que envolvem estruturas de dados, como o Heap Sort, e algoritmos que trabalham com variáveis mutáveis, como Counting Sort, o Bucket Sort e o Radix Sort, são especialmente mais difíceis de implementar nesta linguagem funcional utilizando seu conhecimento básico. Em contraposição, algoritmos mais utilizados, como o Quick Sort e outros apresentados em aula tem uma resolução mais elegante, embora nem sempre a eficiência mantenha-se igual em relação às suas implemenetações imperativas. Os algoritmos apresentados neste projeto, da forma que foram implementados, demonstraram eficiência diferente do que se esperava. A partir dos resultados demonstrados na seção 5.2, temos o seguinte ranking de eficiência:
+A implementação de algoritmos de ordenação em Haskell pode ser uma tarefa difícil ou fácil, dependendo de muitos fatores. Algoritmos que envolvem estruturas de dados, como o Heap Sort, e algoritmos que trabalham com variáveis mutáveis, como o Counting Sort, o Bucket Sort e o Radix Sort, são especialmente mais difíceis de implementar nesta linguagem funcional utilizando seu conhecimento básico. Em contraposição, algoritmos mais utilizados, como o Quick Sort e outros apresentados em aula tem uma resolução mais elegante, embora nem sempre a eficiência mantenha-se igual em relação às suas implemenetações imperativas. Os algoritmos apresentados neste projeto, da forma que foram implementados, demonstraram eficiência diferente do que se esperava. A partir dos resultados demonstrados na seção 5.2, temos o seguinte ranking de eficiência:
 
 \begin{enumerate}
 \item Selection Sort (557 nanosegundos)
@@ -487,7 +487,7 @@ A implementação de algoritmos de ordenação em Haskell pode ser uma tarefa di
 \item Bubble Sort (1 hora e 21 minutos)
 \end{enumerate}
 
-Neste ranking, o tempo é dado pela média de todos os tempos de execução de todas as listas de teste. Além disso, todos os piores casos do Quick Sort (Reverses) foram desconsiderados. Caso contrário, ele alocaria-se na posição 7, com um tempo médio de 328.5 milissegundos.
+Neste ranking, o tempo é dado pela média dos tempos de execução de todas as listas de teste. Além disso, todos os piores casos do Quick Sort (Reverses) foram desconsiderados. Caso contrário, ele alocaria-se na posição 7, com um tempo médio de 328.5 milissegundos.
 
 Veja que, para os vetores de teste utilizados, o algoritmo padrão de ordenação do Haskell não é o melhor em questões de tempo, embora continue sendo um algoritmo rápido, de resposta quase imediata à nossa percepção. No entanto, como não houve análise de memória utilizada, não há como afirmar se qualquer uma dessas implementações seria de fato melhor do que o algoritmo padrão.
 
